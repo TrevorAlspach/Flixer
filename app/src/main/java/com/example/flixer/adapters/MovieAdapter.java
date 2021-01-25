@@ -38,7 +38,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     }
 
     public int getItemViewType(int position){
-        if (movies.get(position).getRating() >= 5.0)
+        if (movies.get(position).getRating() >= 7.5)
             return POPULAR;
         else
             return NOT_POPULAR;
@@ -94,7 +94,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             String imageUrl;
-            if ((context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) || (movie.getRating() > 5.0)){
+            if ((context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) || (movie.getRating() > 7.5)){
                 imageUrl = movie.getBackdropPath();
             }
             else {
